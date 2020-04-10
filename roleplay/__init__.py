@@ -1,4 +1,4 @@
-from .roleplay import roleplay
+from .roleplay import Roleplay
 
 def setup(bot):
     n = Roleplay()

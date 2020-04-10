@@ -1,9 +1,10 @@
- #thanks to jintaku for this, I have mostly just edited their code a little bit!
 import discord
 from redbot.core import commands, Config
 from random import randint
 import aiohttp
 import logging
+
+#thanks to jintaku for this, I have mostly just edited their code a little bit!
 
 log = logging.getLogger("Roleplay")  # Thanks to Sinbad for the example code for logging
 log.setLevel(logging.DEBUG)

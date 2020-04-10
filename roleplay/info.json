@@ -1,0 +1,9 @@
+{
+  "author" : ["Quashera"],
+  "bot_version": [3,0,0],
+  "install_msg" : "Rolplay wit your friends!",
+  "short" : "Action Gifs!",
+  "description" : "roleplay using anime gifs",
+  "tags" : ["GIF", "roleplay"],
+  "hidden" : false
+}

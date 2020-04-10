@@ -301,11 +301,11 @@ class Roleplay(BaseCog):
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def hug(self, ctx, *, user: discord.Member):
+    async def hugs(self, ctx, *, user: discord.Member):
         """Hugs a user!"""
 
         author = ctx.message.author
-        images = await self.config.hug()
+        images = await self.config.hugs()
 
         nekos = await self.fetch_nekos_life(ctx, "hug")
         images.extend(nekos)

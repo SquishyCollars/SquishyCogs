@@ -154,7 +154,7 @@ class Roleplay(BaseCog):
         author = ctx.message.author
         images = await self.config.hug()
         og = len(images)
-        if og < 15
+        if (og < 15)
             nekos = await self.fetch_nekos_life(ctx, "hug")
             images.extend(nekos)
 

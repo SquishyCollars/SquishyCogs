@@ -36,6 +36,7 @@ class Roleplay(BaseCog):
                 "https://cdn.discordapp.com/attachments/402549927894319105/698152378532102174/0bec930221c5c42cf0820a4fb6a859d5.png",
                 "https://media1.tenor.com/images/09005550fb8642d13e544d2045a409c5/tenor.gif",
                 "https://media1.tenor.com/images/76445cecfdac1c1756eeeffd67ae4a42/tenor.gif",
+                "https://media1.tenor.com/images/b0de026a12e20137a654b5e2e65e2aed/tenor.gif",
             ],
             "tuck": [
                 "https://media.tenor.com/images/9a91231bcba3bc3c37361a68cd991d13/tenor.gif",
@@ -44,10 +45,14 @@ class Roleplay(BaseCog):
             ],
             "kiss": [
                 "https://cdn.discordapp.com/attachments/365231207065321482/407290984758640640/6cddb0f881963edc33a38e66502d8f67.gif",
+                "https://media1.tenor.com/images/0f0637c4fabb1baff48a88f35bab4eee/tenor.gif",
             ],
             "slap": [
                 "https://media.tenor.com/images/0c9d54efda0d9eda6c8cbafdbac6cf76/tenor.gif",
                 "https://media.discordapp.net/attachments/402549927894319105/685115586405072896/image0.gif",
+                "https://media1.tenor.com/images/5bc60fa342da31f5aec13faf54813cc1/tenor.gif",
+                "https://media1.tenor.com/images/a0ef889b08798078e1180f1baba8274b/tenor.gif",
+                "https://cdn.discordapp.com/attachments/698107048092500018/698159693410861056/tenor_5.gif",
             ],
             "pat": [
                 "https://cdn.discordapp.com/attachments/698106187593547797/698122036966326282/tenor_5.gif",
@@ -57,6 +62,10 @@ class Roleplay(BaseCog):
                 "https://images-ext-2.discordapp.net/external/aXnh4RAV1SKmYZSle-aNW7serXR7A5lWB0IPbRcJYzY/https/cdn.nekos.life/pat/pat_021.gif",
                 "https://cdn.discordapp.com/attachments/365231207065321482/365231814601605130/c741fec81ea5eceb8ebcc7b4dc2bedd5.gif",
                 "https://cdn.discordapp.com/attachments/365231207065321482/421773429407088641/2oywl03lcrk01.gif",
+                "https://cdn.discordapp.com/attachments/698106187593547797/698158825684992030/90c56fd0c24ef9152bba28f01946bee1.gif",
+                "https://cdn.discordapp.com/attachments/698106187593547797/698158846967021629/ccb857b813847072010d43aa8c85ceb1.gif",
+                "https://cdn.discordapp.com/attachments/698106187593547797/698159187255099402/tumblr_d63c9507eff0e4406531104ebcc04a81_e80aaef7_640.gif",
+                "https://media1.tenor.com/images/f7efdcb10a668d5f7fd1e23355069c7a/tenor.gif",
             ],
             "highfive": [
                 "https://media1.tenor.com/images/0ae4995e4eb27e427454526c05b2e3dd/tenor.gif?itemid=12376992",
@@ -106,6 +115,14 @@ class Roleplay(BaseCog):
                 "https://media.tenor.com/images/e736e6f45b407e46719e29bc5c918681/tenor.gif",
                 "https://media1.tenor.com/images/9f8bb51d0290543e2e2c5938b21309bf/tenor.gif",
                 "https://cdn.discordapp.com/attachments/698107074185265222/698152520316616734/giphy_1.gif",
+                "https://cdn.discordapp.com/attachments/698107074185265222/698157855450333224/PhysicalEquatorialBarnswallow-size_restricted.gif",
+                "https://media1.tenor.com/images/8acac3c0a044cfe25d95547b05be222c/tenor.gif?itemid=10597667",
+            ],
+            "blush": [
+            "https://media.giphy.com/media/T3Vvyi6SHJtXW/giphy.gif",
+            "https://media1.tenor.com/images/cc187b06f246e71b07613e3957d87e00/tenor.gif",
+            "https://media1.tenor.com/images/5ea40ca0d6544dbf9c0074542810e149/tenor.gif",
+            "https://media1.tenor.com/images/dc917566da214fa3c4e7ddcc58228db9/tenor.gif",
             ],
         }
         self.config.register_global(**default_global)
@@ -365,7 +382,7 @@ class Roleplay(BaseCog):
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
     async def nyan(self, ctx):
-        """Nyaaaa~!"""
+        """Go nyaaaa~!"""
 
         author = ctx.message.author
         images = await self.config.nyan()
@@ -383,7 +400,7 @@ class Roleplay(BaseCog):
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
     async def cry(self, ctx):
-        """Uwaaa D:"""
+        """Cry D:"""
 
         author = ctx.message.author
         images = await self.config.cry()
@@ -401,7 +418,7 @@ class Roleplay(BaseCog):
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
     async def dropkick(self, ctx, *, user: discord.Member):
-        """dropkick a user!"""
+        """Dropkick a user!"""
 
         author = ctx.message.author
         images = await self.config.dropkick()
@@ -412,6 +429,24 @@ class Roleplay(BaseCog):
         embed = discord.Embed()
         embed.description = f"**{author.mention} dropkicks {user.mention}**"
 
+        embed.set_image(url=images[i])
+        await ctx.send(embed=embed)
+
+    @commands.command()
+    @commands.bot_has_permissions(embed_links=True)
+    async def blush(self, ctx):
+        """Blush"""
+
+        author = ctx.message.author
+        images = await self.config.blush()
+        og = len(images)
+
+        mn = len(images)
+        i = randint(0, mn - 1)
+
+        # Build Embed
+        embed = discord.Embed()
+        embed.description = f"**{author.mention} is blushing**"
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 

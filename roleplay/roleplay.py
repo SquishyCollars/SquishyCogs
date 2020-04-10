@@ -30,7 +30,6 @@ class Roleplay(BaseCog):
             "hug": [
                 "https://media1.tenor.com/images/18474dc6afa97cef50ad53cf84e37d08/tenor.gif",
                 "https://media1.tenor.com/images/6db54c4d6dad5f1f2863d878cfb2d8df/tenor.gif",
-                "https://images-ext-1.discordapp.net/external/WET7mBDs8QnVPGCvg_YC8kyuYmfEMPuxAGuFHeBPlA0/https/cdn.nekos.life/cuddle/cuddle_010.gif",
                 "https://cdn.discordapp.com/attachments/365231207065321482/413007963603599363/xUPGckYDiRSKpt2Q4o.gif",
                 "https://tenor.com/view/noragami-kofuku-daikoku-hugging-love-gif-14637016",
                 "https://media1.tenor.com/images/daffa3b7992a08767168614178cce7d6/tenor.gif",

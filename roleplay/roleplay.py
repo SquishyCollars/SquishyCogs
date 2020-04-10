@@ -154,9 +154,9 @@ class Roleplay(BaseCog):
         author = ctx.message.author
         images = await self.config.hug()
         og = len(images)
-
-        nekos = await self.fetch_nekos_life(ctx, "hug")
-        images.extend(nekos)
+        if og < 15
+            nekos = await self.fetch_nekos_life(ctx, "hug")
+            images.extend(nekos)
 
         mn = len(images)
         i = randint(0, mn - 1)
@@ -168,7 +168,7 @@ class Roleplay(BaseCog):
         embed.set_image(url=images[i])
         #gives credit when using nekos
         if og < i:
-            embed.set_footer(text="Made with images from nekos.life")
+            embed.set_footer(text="I didn't have that many gifs on this topic, so I got one from nekos.life. Ask quashera how you can help add more!")
         await ctx.send(embed=embed)
 
 
@@ -394,7 +394,7 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} Yeets {user.mention}**"
+        embed.description = f"**{author.mention} yEets {user.mention}**"
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 

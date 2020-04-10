@@ -17,9 +17,9 @@ else:
     console.setLevel(logging.INFO)
 log.addHandler(console)
 
-
 BaseCog = getattr(commands, "Cog", object)
 
+ml = 15 #sets min length for when it stops searching online for gifs
 
 class Roleplay(BaseCog):
     """Roleplay with gifs"""
@@ -155,8 +155,7 @@ class Roleplay(BaseCog):
         author = ctx.message.author
         images = await self.config.hug()
         og = len(images)
-        ml = 15
-        if og < ml
+        if og < ml:
             nekos = await self.fetch_nekos_life(ctx, "hug")
             images.extend(nekos)
 

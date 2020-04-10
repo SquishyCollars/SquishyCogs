@@ -9,14 +9,14 @@ Just a smol collection of cogs for my personal use, but feel free to have a look
 `[p] is your prefix`
 
 # Cog list
-**roleplay**
+**roleplay**  
 Roleplay actions with other people with gifs!
 contains the following actions
-
-**blush** You're blushing
-**cry** Cry D:
-**dropkick** Dropkick someone!   
-**feed** Feeds someone!    
+------------  
+**blush** You're blushing  
+**cry** Cry D:  
+**dropkick** Dropkick someone!  
+**feed** Feeds someone!  
 **highfive** Highfives someone!  
 **hug** Hugs someone!  
 **kiss** Kiss someone!  
@@ -28,6 +28,7 @@ contains the following actions
 **tickle** Tickles someone!  
 **tuck** Tuck in someone!  
 **yeet** Yeets someone!  
+------------  
 
 # Credits
 https://github.com/Jintaku/Jintaku-Cogs-V3 For the base of the roleplay cog.

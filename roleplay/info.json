@@ -1,9 +1,9 @@
 {
   "author" : ["Quashera"],
   "bot_version": [3,0,0],
-  "install_msg" : "Rolplay wit your friends!",
+  "install_msg" : "Thanks for installing! all the commands should now be in your [p]help under Roleplay:",
   "short" : "Action Gifs!",
-  "description" : "roleplay using anime gifs",
+  "description" : "roleplay using gifs",
   "tags" : ["GIF", "roleplay"],
   "hidden" : false
 }

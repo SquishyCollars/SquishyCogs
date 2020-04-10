@@ -17,6 +17,8 @@ else:
     console.setLevel(logging.INFO)
 log.addHandler(console)
 
+min =  10 # sets the minimum amount of messages to stop using nekos
+
 BaseCog = getattr(commands, "Cog", object)
 
 
@@ -154,7 +156,7 @@ class Roleplay(BaseCog):
         author = ctx.message.author
         images = await self.config.hug()
         og = len(images)
-        if (og < 15)
+        if og < min
             nekos = await self.fetch_nekos_life(ctx, "hug")
             images.extend(nekos)
 

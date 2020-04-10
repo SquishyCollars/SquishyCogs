@@ -34,6 +34,8 @@ class Roleplay(BaseCog):
                 "https://tenor.com/view/noragami-kofuku-daikoku-hugging-love-gif-14637016",
                 "https://media1.tenor.com/images/daffa3b7992a08767168614178cce7d6/tenor.gif",
                 "https://cdn.discordapp.com/attachments/402549927894319105/698152378532102174/0bec930221c5c42cf0820a4fb6a859d5.png",
+                "https://media1.tenor.com/images/09005550fb8642d13e544d2045a409c5/tenor.gif",
+                "https://media1.tenor.com/images/76445cecfdac1c1756eeeffd67ae4a42/tenor.gif",
             ],
             "tuck": [
                 "https://media.tenor.com/images/9a91231bcba3bc3c37361a68cd991d13/tenor.gif",
@@ -70,7 +72,8 @@ class Roleplay(BaseCog):
             ],
             "poke": [
                 "https://img2.gelbooru.com/images/07/86/078690a58e0b816e8e00cc58e090b499.gif",
-                "https://media.tenor.com/images/6b5c1554a6ee9d48ab0392603bab8a8e/tenor.gif",
+                "https://media1.tenor.com/images/01b264dc057eff2d0ee6869e9ed514c1/tenor.gif",
+                "https://media1.tenor.com/images/e8b25e7d069c203ea7f01989f2a0af59/tenor.gif",
             ],
             "smug": [
                 "https://cdn.nekos.life/v3/sfw/gif/smug/smug_027.gif",
@@ -394,7 +397,7 @@ class Roleplay(BaseCog):
         embed.description = f"**{author.mention} cries**"
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
-        
+
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
     async def dropkick(self, ctx, *, user: discord.Member):

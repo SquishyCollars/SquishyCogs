@@ -306,6 +306,7 @@ class Roleplay(BaseCog):
 
         author = ctx.message.author
         images = await self.config.hugs()
+        og = len(images)
 
         nekos = await self.fetch_nekos_life(ctx, "hug")
         images.extend(nekos)
@@ -313,12 +314,15 @@ class Roleplay(BaseCog):
         mn = len(images)
         i = randint(0, mn - 1)
 
+
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} hugs {user.mention}**"
-
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
+        #gives credit where credit is due
+        if og < i:
+            embed.set_footer(text=footertxt)
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
@@ -329,8 +333,8 @@ class Roleplay(BaseCog):
         images = await self.config.cuddle()
 
         nekos = await self.fetch_nekos_life(ctx, "cuddle")
-        images.extend(nekos)
 
+        images.extend(nekos)
         mn = len(images)
         i = randint(0, mn - 1)
 

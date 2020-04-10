@@ -169,7 +169,7 @@ class Roleplay(BaseCog):
         embed.set_image(url=images[i])
         #gives credit when using nekos
         if og < i:
-            embed.set_footer(text="I didn't have that many gifs on this topic, so I got one from nekos.life. Ask quashera how you can help add more!")
+            embed.set_footer(text="Image gotten from nekos.life. Ask quashera how you can help add more custom ones!")
         await ctx.send(embed=embed)
 
 
@@ -192,7 +192,7 @@ class Roleplay(BaseCog):
         embed.set_image(url=images[i])
         #gives credit when using nekos
         if og < i:
-            embed.set_footer(text="Made with the help of nekos.life")
+            embed.set_footer(text="Image gotten from nekos.life. Ask quashera how you can help add more custom ones!")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -203,9 +203,9 @@ class Roleplay(BaseCog):
         author = ctx.message.author
         images = await self.config.kiss()
         og = len(images)
-
-        nekos = await self.fetch_nekos_life(ctx, "kiss")
-        images.extend(nekos)
+        if og < ml:
+            nekos = await self.fetch_nekos_life(ctx, "kiss")
+            images.extend(nekos)
 
         mn = len(images)
         i = randint(0, mn - 1)
@@ -217,7 +217,7 @@ class Roleplay(BaseCog):
         embed.set_image(url=images[i])
         #gives credit when using nekos
         if og < i:
-            embed.set_footer(text="Made with the help of nekos.life")
+            embed.set_footer(text="Image gotten from nekos.life. Ask quashera how you can help add more custom ones!")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -228,9 +228,9 @@ class Roleplay(BaseCog):
         author = ctx.message.author
         images = await self.config.slap()
         og = len(images)
-
-        nekos = await self.fetch_nekos_life(ctx, "slap")
-        images.extend(nekos)
+        if og < ml:
+            nekos = await self.fetch_nekos_life(ctx, "slap")
+            images.extend(nekos)
 
         mn = len(images)
         i = randint(0, mn - 1)
@@ -242,7 +242,7 @@ class Roleplay(BaseCog):
         embed.set_image(url=images[i])
         #gives credit when using nekos
         if og < i:
-            embed.set_footer(text="Made with the help of nekos.life")
+            embed.set_footer(text="Image gotten from nekos.life. Ask quashera how you can help add more custom ones!")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -253,9 +253,9 @@ class Roleplay(BaseCog):
         author = ctx.message.author
         images = await self.config.pat()
         og = len(images)
-
-        nekos = await self.fetch_nekos_life(ctx, "pat")
-        images.extend(nekos)
+        if og < ml:
+            nekos = await self.fetch_nekos_life(ctx, "pat")
+            images.extend(nekos)
 
         mn = len(images)
         i = randint(0, mn - 1)
@@ -267,7 +267,7 @@ class Roleplay(BaseCog):
         embed.set_image(url=images[i])
         #gives credit when using nekos
         if og < i:
-            embed.set_footer(text="Made with the help of nekos.life")
+            embed.set_footer(text="Image gotten from nekos.life. Ask quashera how you can help add more custom ones!")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -295,9 +295,9 @@ class Roleplay(BaseCog):
         author = ctx.message.author
         images = await self.config.feed()
         og = len(images)
-
-        nekos = await self.fetch_nekos_life(ctx, "feed")
-        images.extend(nekos)
+        if og < ml:
+            nekos = await self.fetch_nekos_life(ctx, "feed")
+            images.extend(nekos)
 
         mn = len(images)
         i = randint(0, mn - 1)
@@ -309,7 +309,7 @@ class Roleplay(BaseCog):
         embed.set_image(url=images[i])
         #gives credit when using nekos
         if og < i:
-            embed.set_footer(text="Made with the help of nekos.life")
+            embed.set_footer(text="Image gotten from nekos.life. Ask quashera how you can help add more custom ones!")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -320,9 +320,9 @@ class Roleplay(BaseCog):
         author = ctx.message.author
         images = await self.config.tickle()
         og = len(images)
-
-        nekos = await self.fetch_nekos_life(ctx, "tickle")
-        images.extend(nekos)
+        if og < ml:
+            nekos = await self.fetch_nekos_life(ctx, "tickle")
+            images.extend(nekos)
 
         mn = len(images)
         i = randint(0, mn - 1)
@@ -342,9 +342,9 @@ class Roleplay(BaseCog):
         author = ctx.message.author
         images = await self.config.poke()
         og = len(images)
-
-        nekos = await self.fetch_nekos_life(ctx, "poke")
-        images.extend(nekos)
+        if og < ml:
+            nekos = await self.fetch_nekos_life(ctx, "poke")
+            images.extend(nekos)
 
         mn = len(images)
         i = randint(0, mn - 1)
@@ -355,7 +355,7 @@ class Roleplay(BaseCog):
         embed.set_image(url=images[i])
         #gives credit when using nekos
         if og < i:
-            embed.set_footer(text="Made with the help of nekos.life")
+            embed.set_footer(text="Image gotten from nekos.life. Ask quashera how you can help add more custom ones!")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -380,7 +380,7 @@ class Roleplay(BaseCog):
         embed.set_image(url=images[i])
         #gives credit when using nekos
         if og < i:
-            embed.set_footer(text="Made with the help of nekos.life")
+            embed.set_footer(text="Image gotten from nekos.life. Ask quashera how you can help add more custom ones!")
         await ctx.send(embed=embed)
 
     @commands.command()

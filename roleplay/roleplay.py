@@ -17,7 +17,6 @@ else:
     console.setLevel(logging.INFO)
 log.addHandler(console)
 
-minlength =  10 # sets the minimum amount of messages to stop using nekos
 
 BaseCog = getattr(commands, "Cog", object)
 
@@ -28,6 +27,7 @@ class Roleplay(BaseCog):
     def __init__(self):
         self.config = Config.get_conf(self, identifier=842364413)
         default_global = {
+            "minlength" =  10 # sets the minimum amount of messages to stop using nekos
             "hug": [
                 "https://media1.tenor.com/images/18474dc6afa97cef50ad53cf84e37d08/tenor.gif",
                 "https://media1.tenor.com/images/6db54c4d6dad5f1f2863d878cfb2d8df/tenor.gif",

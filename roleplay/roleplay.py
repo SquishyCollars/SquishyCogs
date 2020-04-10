@@ -26,30 +26,35 @@ class Roleplay(BaseCog):
     def __init__(self):
         self.config = Config.get_conf(self, identifier=842364413)
         default_global = {
-            "hugs": [
-                "https://img2.gelbooru.com/images/ff/63/ff63a3c4329fda2bf1e9704d4e150fea.gif",
-                "https://img2.gelbooru.com/images/2c/e8/2ce81403e0279f1a570711f7472b3abb.gif",
-                "https://img2.gelbooru.com/images/e2/05/e205e349535e22c07865913770dcad5f.gif",
-                "https://img2.gelbooru.com/images/09/f6/09f63a79f70700abb2593862525ade10.gif",
+            "hug": [
+                "https://media1.tenor.com/images/18474dc6afa97cef50ad53cf84e37d08/tenor.gif",
+                "https://media1.tenor.com/images/6db54c4d6dad5f1f2863d878cfb2d8df/tenor.gif",
+                "https://images-ext-1.discordapp.net/external/WET7mBDs8QnVPGCvg_YC8kyuYmfEMPuxAGuFHeBPlA0/https/cdn.nekos.life/cuddle/cuddle_010.gif",
+                "https://cdn.discordapp.com/attachments/365231207065321482/413007963603599363/xUPGckYDiRSKpt2Q4o.gif",
+                "https://tenor.com/view/noragami-kofuku-daikoku-hugging-love-gif-14637016",
+                "https://media1.tenor.com/images/daffa3b7992a08767168614178cce7d6/tenor.gif",
+                "https://cdn.discordapp.com/attachments/402549927894319105/698152378532102174/0bec930221c5c42cf0820a4fb6a859d5.png",
             ],
-            "cuddle": [
-                "https://cdn.weeb.sh/images/BkTe8U7v-.gif",
-                "https://cdn.weeb.sh/images/SykzL87D-.gif",
+            "tuck": [
+                "https://media.tenor.com/images/9a91231bcba3bc3c37361a68cd991d13/tenor.gif",
+                "https://media.tenor.com/images/2beb7b4596fd14ba0b24e70f3aeae8a0/tenor.gif",
+                "https://media1.tenor.com/images/ac21cca8c2e6d7de42d23b69828afa76/tenor.gif",
             ],
             "kiss": [
-                "https://img2.gelbooru.com/images/72/3d/723d7b46a080e459321cb0a46fa4ff84.gif",
-                "https://img2.gelbooru.com/images/14/15/141537ae7a372f093e7d6996b16c245b.gif",
+                "https://cdn.discordapp.com/attachments/365231207065321482/407290984758640640/6cddb0f881963edc33a38e66502d8f67.gif",
             ],
             "slap": [
-                "https://cdn.weeb.sh/images/H16aQJFvb.gif",
-                "https://img2.gelbooru.com/images/d2/2c/d22c2eedd00914ce38efb46d797be031.gif",
+                "https://media.tenor.com/images/0c9d54efda0d9eda6c8cbafdbac6cf76/tenor.gif",
+                "https://media.discordapp.net/attachments/402549927894319105/685115586405072896/image0.gif",
             ],
             "pat": [
-                "https://cdn.weeb.sh/images/r180y1Yvb.gif",
-                "https://img2.gelbooru.com/images/56/b9/56b9297e70fd0312aba34e7ed1608b27.gif",
-            ],
-            "lick": [
-                "https://media1.tenor.com/images/c4f68fbbec3c96193386e5fcc5429b89/tenor.gif?itemid=13451325",
+                "https://cdn.discordapp.com/attachments/698106187593547797/698122036966326282/tenor_5.gif",
+                "https://media.tenor.com/images/7cdb415873e24292b11ab31a339dd552/tenor.gif",
+                "https://images-ext-2.discordapp.net/external/0Fv1vbGYA6OiBdc-CsdQ7mPku27t0LieYb9OZ5Ub5fc/https/cdn.nekos.life/pat/pat_053.gif",
+                "https://media1.tenor.com/images/005e8df693c0f59e442b0bf95c22d0f5/tenor.gif",
+                "https://images-ext-2.discordapp.net/external/aXnh4RAV1SKmYZSle-aNW7serXR7A5lWB0IPbRcJYzY/https/cdn.nekos.life/pat/pat_021.gif",
+                "https://cdn.discordapp.com/attachments/365231207065321482/365231814601605130/c741fec81ea5eceb8ebcc7b4dc2bedd5.gif",
+                "https://cdn.discordapp.com/attachments/365231207065321482/421773429407088641/2oywl03lcrk01.gif",
             ],
             "highfive": [
                 "https://media1.tenor.com/images/0ae4995e4eb27e427454526c05b2e3dd/tenor.gif?itemid=12376992",
@@ -61,7 +66,7 @@ class Roleplay(BaseCog):
             ],
             "tickle": [
                 "https://img2.gelbooru.com/images/c4/41/c441cf1fce1fe51420796f6bd0e420e1.gif",
-                "https://media1.tenor.com/images/05a64a05e5501be2b1a5a734998ad2b2/tenor.gif?itemid=11379130",
+                "https://media1.tenor.com/images/05a64a05e5501be2b1a5a734998ad2b2/tenor.gif",
             ],
             "poke": [
                 "https://img2.gelbooru.com/images/07/86/078690a58e0b816e8e00cc58e090b499.gif",
@@ -88,7 +93,17 @@ class Roleplay(BaseCog):
                 "https://media.tenor.com/images/f0b0dc7f3824f9863131f7627812c646/tenor.gif",
                 "https://cdn.discordapp.com/attachments/365231207065321482/365232759129505823/1f77238736710f3b62526c180c38f1a2.gif",
                 "https://cdn.discordapp.com/attachments/365231207065321482/376517834802724875/6aecabc2-70a2-4389-8085-852f026cd16f.gif",
-            ]
+            ],
+            "cry": [
+                "https://cdn.discordapp.com/attachments/365231207065321482/426455193849167872/p5mr8wEctT1wga4wmo1_540.gif",
+                "https://cdn.discordapp.com/attachments/698115673896779776/698145183031885925/aqua-crying-gif.gif",
+                "https://media.tenor.com/images/dca3a60e50f96355e30bf009864cd65c/tenor.gif",
+            ],
+            "dropkick": [
+                "https://media.tenor.com/images/e736e6f45b407e46719e29bc5c918681/tenor.gif",
+                "https://media1.tenor.com/images/9f8bb51d0290543e2e2c5938b21309bf/tenor.gif",
+                "https://cdn.discordapp.com/attachments/698107074185265222/698152520316616734/giphy_1.gif",
+            ],
         }
         self.config.register_global(**default_global)
 
@@ -98,7 +113,7 @@ class Roleplay(BaseCog):
         """Hugs a user!"""
 
         author = ctx.message.author
-        images = await self.config.hugs()
+        images = await self.config.hug()
         og = len(images)
 
         nekos = await self.fetch_nekos_life(ctx, "hug")
@@ -114,28 +129,25 @@ class Roleplay(BaseCog):
         embed.set_image(url=images[i])
         #gives credit when using nekos
         if og < i:
-            embed.set_footer(text="Made with the help of nekos.life")
+            embed.set_footer(text="Made with images from nekos.life")
         await ctx.send(embed=embed)
 
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def cuddle(self, ctx, *, user: discord.Member):
-        """Cuddles a user!"""
+    async def tuck(self, ctx, *, user: discord.Member):
+        """Tuck in a user!"""
 
         author = ctx.message.author
-        images = await self.config.cuddle()
+        images = await self.config.Tuck()
         og = len(images)
 
-        nekos = await self.fetch_nekos_life(ctx, "cuddle")
-
-        images.extend(nekos)
         mn = len(images)
         i = randint(0, mn - 1)
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} cuddles {user.mention}**"
+        embed.description = f"**{author.mention} tucks in {user.mention}**"
 
         embed.set_image(url=images[i])
         #gives credit when using nekos
@@ -211,28 +223,6 @@ class Roleplay(BaseCog):
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} pats {user.mention}**"
-
-        embed.set_image(url=images[i])
-        #gives credit when using nekos
-        if og < i:
-            embed.set_footer(text="Made with the help of nekos.life")
-        await ctx.send(embed=embed)
-
-    @commands.command()
-    @commands.bot_has_permissions(embed_links=True)
-    async def lick(self, ctx, *, user: discord.Member):
-        """Licks a user!"""
-
-        author = ctx.message.author
-        images = await self.config.lick()
-        og = len(images)
-
-        mn = len(images)
-        i = randint(0, mn - 1)
-
-        # Build Embed
-        embed = discord.Embed()
-        embed.description = f"**{author.mention} licks {user.mention}**"
 
         embed.set_image(url=images[i])
         #gives credit when using nekos
@@ -383,7 +373,42 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} goes nyaaa!~~♡**"
+        embed.description = f"**{author.mention} goes nyan nyan!~♡**"
+        embed.set_image(url=images[i])
+        await ctx.send(embed=embed)
+
+    @commands.command()
+    @commands.bot_has_permissions(embed_links=True)
+    async def cry(self, ctx):
+        """Uwaaa D:"""
+
+        author = ctx.message.author
+        images = await self.config.cry()
+        og = len(images)
+
+        mn = len(images)
+        i = randint(0, mn - 1)
+
+        # Build Embed
+        embed = discord.Embed()
+        embed.description = f"**{author.mention} cries**"
+        embed.set_image(url=images[i])
+        await ctx.send(embed=embed)
+        
+    @commands.command()
+    @commands.bot_has_permissions(embed_links=True)
+    async def dropkick(self, ctx, *, user: discord.Member):
+        """dropkick a user!"""
+
+        author = ctx.message.author
+        images = await self.config.dropkick()
+        mn = len(images)
+        i = randint(0, mn - 1)
+
+        # Build Embed
+        embed = discord.Embed()
+        embed.description = f"**{author.mention} dropkicks {user.mention}**"
+
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 

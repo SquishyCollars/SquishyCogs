@@ -9,7 +9,7 @@ Just a smol collection of cogs for my personal use, but feel free to have a look
 `[p] is your prefix`
 
 # Cog list
-##roleplay
+**roleplay**
 Roleplay actions with other people with gifs!
 contains the following actions
 

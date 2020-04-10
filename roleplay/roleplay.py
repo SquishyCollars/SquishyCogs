@@ -322,7 +322,7 @@ class Roleplay(BaseCog):
         await ctx.send(embed=embed)
         #gives credit where credit is due
         if og < i:
-            embed.set_footer(text=footertxt)
+            embed.set_footer(text="Made with the help of nekos.life")
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)

@@ -65,9 +65,7 @@ class Roleplay(BaseCog):
             "pat": [
                 "https://cdn.discordapp.com/attachments/698106187593547797/698122036966326282/tenor_5.gif",
                 "https://media.tenor.com/images/7cdb415873e24292b11ab31a339dd552/tenor.gif",
-                "https://images-ext-2.discordapp.net/external/0Fv1vbGYA6OiBdc-CsdQ7mPku27t0LieYb9OZ5Ub5fc/https/cdn.nekos.life/pat/pat_053.gif",
                 "https://media1.tenor.com/images/005e8df693c0f59e442b0bf95c22d0f5/tenor.gif",
-                "https://images-ext-2.discordapp.net/external/aXnh4RAV1SKmYZSle-aNW7serXR7A5lWB0IPbRcJYzY/https/cdn.nekos.life/pat/pat_021.gif",
                 "https://cdn.discordapp.com/attachments/365231207065321482/365231814601605130/c741fec81ea5eceb8ebcc7b4dc2bedd5.gif",
                 "https://cdn.discordapp.com/attachments/365231207065321482/421773429407088641/2oywl03lcrk01.gif",
                 "https://cdn.discordapp.com/attachments/698106187593547797/698158825684992030/90c56fd0c24ef9152bba28f01946bee1.gif",
@@ -360,7 +358,7 @@ class Roleplay(BaseCog):
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
     async def smug(self, ctx):
-        """Be smug towards someone!"""
+        """Be smug!"""
 
         author = ctx.message.author
         images = await self.config.smug()
@@ -385,7 +383,7 @@ class Roleplay(BaseCog):
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
     async def yeet(self, ctx, *, user: discord.Member):
-        """Yeets a user!"""
+        """yeets a user!"""
 
         author = ctx.message.author
         images = await self.config.yeet()

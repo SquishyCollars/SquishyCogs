@@ -81,6 +81,14 @@ class Roleplay(BaseCog):
                 "https://media1.tenor.com/images/b909e525194ec8edb6d370f5f01fcc64/tenor.gif",
                 "https://media1.tenor.com/images/541b696027d7142b102b3eebd31a5753/tenor.gif",
             ],
+            "nyan": [
+                "https://media.tenor.com/images/7ea76e888587b947e1b2e6f09a0e016e/tenor.gif",
+                "https://media.tenor.com/images/a21c6e60b2f74e4e2db7e80a3668fc59/tenor.gif",
+                "https://media.tenor.com/images/b38fa518b3df44594fdab73a25e9aca0/tenor.gif",
+                "https://media.tenor.com/images/f0b0dc7f3824f9863131f7627812c646/tenor.gif",
+                "https://cdn.discordapp.com/attachments/365231207065321482/365232759129505823/1f77238736710f3b62526c180c38f1a2.gif",
+                "https://cdn.discordapp.com/attachments/365231207065321482/376517834802724875/6aecabc2-70a2-4389-8085-852f026cd16f.gif",
+            ]
         }
         self.config.register_global(**default_global)
 
@@ -358,6 +366,24 @@ class Roleplay(BaseCog):
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} Yeets {user.mention}**"
+        embed.set_image(url=images[i])
+        await ctx.send(embed=embed)
+
+    @commands.command()
+    @commands.bot_has_permissions(embed_links=True)
+    async def nyan(self, ctx):
+        """Nyaaaa~!"""
+
+        author = ctx.message.author
+        images = await self.config.nyan()
+        og = len(images)
+
+        mn = len(images)
+        i = randint(0, mn - 1)
+
+        # Build Embed
+        embed = discord.Embed()
+        embed.description = f"**{author.mention} goes nyaaa!~~♡**"
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 

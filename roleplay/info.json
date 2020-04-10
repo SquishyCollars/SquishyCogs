@@ -1,7 +1,7 @@
 {
   "author" : ["Quashera"],
-  "bot_version": [3,0,0],
-  "install_msg" : "Thanks for installing! all the commands should now be in your [p]help under Roleplay:",
+  "bot_version": [3,0,2],
+  "install_msg" : "Thanks for installing! Activate the cog with [p]load roleplay. The commands should be in [p]help under Roleplay:",
   "short" : "Action Gifs!",
   "description" : "roleplay using gifs",
   "tags" : ["GIF", "roleplay"],

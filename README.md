@@ -12,10 +12,10 @@ Just a smol collection of cogs for my personal use, but feel free to have a look
 **roleplay**  
 Roleplay actions with other people with gifs!
 contains the following actions
-**blush** You're blushing
-**cry** Cry D:
-**dropkick** Dropkick someone!   
-**feed** Feeds someone!    
+**blush** You're blushing  
+**cry** Cry D:  
+**dropkick** Dropkick someone!  
+**feed** Feeds someone!  
 **highfive** Highfives someone!  
 **hug** Hugs someone!  
 **kiss** Kiss someone!  

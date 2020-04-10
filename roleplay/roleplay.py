@@ -392,7 +392,7 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} yEets {user.mention}**"
+        embed.description = f"**{author.mention} yeets {user.mention}**"
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 

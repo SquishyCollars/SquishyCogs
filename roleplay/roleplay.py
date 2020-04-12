@@ -146,7 +146,7 @@ class Roleplay(BaseCog):
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def hug(self, ctx, *, user: discord.Member):
+    async def hug(self, ctx, *, text: str = "" ):
         """Hugs a user!"""
 
         author = ctx.message.author
@@ -162,7 +162,7 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} hugs {user.mention}**"
+        embed.description = f"**{author.mention} hugs {text}**"
         embed.set_image(url=images[i])
         #gives credit when using nekos
         if og < i:
@@ -172,11 +172,11 @@ class Roleplay(BaseCog):
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def tuck(self, ctx, *, user: discord.Member):
+    async def tuck(self, ctx, *, text: str = ""):
         """Tuck in a user!"""
 
         author = ctx.message.author
-        images = await self.config.Tuck()
+        images = await self.config.tuck()
         og = len(images)
 
         mn = len(images)
@@ -184,7 +184,7 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} tucks in {user.mention}**"
+        embed.description = f"**{author.mention} tucks in {text}**"
 
         embed.set_image(url=images[i])
         #gives credit when using nekos
@@ -194,7 +194,7 @@ class Roleplay(BaseCog):
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def kiss(self, ctx, *, user: discord.Member):
+    async def kiss(self, ctx, *,text: str = "" ):
         """Kiss a user!"""
 
         author = ctx.message.author
@@ -209,7 +209,7 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} kisses {user.mention}**"
+        embed.description = f"**{author.mention} kisses {text}**"
 
         embed.set_image(url=images[i])
         #gives credit when using nekos
@@ -219,7 +219,7 @@ class Roleplay(BaseCog):
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def slap(self, ctx, *, user: discord.Member):
+    async def slap(self, ctx, *,text: str = "" ):
         """Slaps a user!"""
 
         author = ctx.message.author
@@ -234,7 +234,7 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} slaps {user.mention}**"
+        embed.description = f"**{author.mention} slaps {text}**"
 
         embed.set_image(url=images[i])
         #gives credit when using nekos
@@ -244,7 +244,7 @@ class Roleplay(BaseCog):
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def pat(self, ctx, *, user: discord.Member):
+    async def pat(self, ctx, *,text: str = "" ):
         """Pats a user!"""
 
         author = ctx.message.author
@@ -259,7 +259,7 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} pats {user.mention}**"
+        embed.description = f"**{author.mention} pats {text}**"
 
         embed.set_image(url=images[i])
         #gives credit when using nekos
@@ -269,7 +269,7 @@ class Roleplay(BaseCog):
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def highfive(self, ctx, *, user: discord.Member):
+    async def highfive(self, ctx, *,text: str = "" ):
         """Highfives a user!"""
 
         author = ctx.message.author
@@ -279,14 +279,14 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} highfives {user.mention}**"
+        embed.description = f"**{author.mention} highfives {text}**"
 
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def feed(self, ctx, *, user: discord.Member):
+    async def feed(self, ctx, *,text: str = "" ):
         """Feeds a user!"""
 
         author = ctx.message.author
@@ -301,7 +301,7 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} feeds {user.mention}**"
+        embed.description = f"**{author.mention} feeds {text}**"
 
         embed.set_image(url=images[i])
         #gives credit when using nekos
@@ -311,7 +311,7 @@ class Roleplay(BaseCog):
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def tickle(self, ctx, *, user: discord.Member):
+    async def tickle(self, ctx, *,text: str = "" ):
         """Tickles a user!"""
 
         author = ctx.message.author
@@ -326,14 +326,14 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} tickles {user.mention}**"
+        embed.description = f"**{author.mention} tickles {text}**"
 
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def poke(self, ctx, *, user: discord.Member):
+    async def poke(self, ctx, *,text: str = "" ):
         """Pokes a user!"""
 
         author = ctx.message.author
@@ -348,7 +348,7 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} pokes {user.mention}**"
+        embed.description = f"**{author.mention} pokes {text}**"
         embed.set_image(url=images[i])
         #gives credit when using nekos
         if og < i:
@@ -382,7 +382,7 @@ class Roleplay(BaseCog):
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def yeet(self, ctx, *, user: discord.Member):
+    async def yeet(self, ctx, *,text: str = "" ):
         """yeets a user!"""
 
         author = ctx.message.author
@@ -392,7 +392,7 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} yeets {user.mention}**"
+        embed.description = f"**{author.mention} yeets {text}**"
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
@@ -434,7 +434,7 @@ class Roleplay(BaseCog):
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def dropkick(self, ctx, *, user: discord.Member):
+    async def dropkick(self, ctx, *,text: str = "" ):
         """Dropkick a user!"""
 
         author = ctx.message.author
@@ -444,7 +444,7 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} dropkicks {user.mention}**"
+        embed.description = f"**{author.mention} dropkicks {text}**"
 
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)

@@ -146,7 +146,7 @@ class Roleplay(BaseCog):
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def hug(self, ctx, *, text: str = "", user: discord.Member, ):
+    async def hug(self, ctx, *, user: discord.Member, text: str = "" ):
         """Hugs a user!"""
 
         author = ctx.message.author

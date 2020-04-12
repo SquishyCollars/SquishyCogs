@@ -176,7 +176,7 @@ class Roleplay(BaseCog):
         """Tuck in a user!"""
 
         author = ctx.message.author
-        images = await self.config.Tuck()
+        images = await self.config.tuck()
         og = len(images)
 
         mn = len(images)

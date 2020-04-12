@@ -146,7 +146,7 @@ class Roleplay(BaseCog):
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def hug(self, ctx, *, user: discord.Member):
+    async def hug(self, ctx, *, text: str = "", user: discord.Member, ):
         """Hugs a user!"""
 
         author = ctx.message.author
@@ -162,7 +162,7 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} hugs {user.mention}**"
+        embed.description = f"**{author.mention} hugs {text} {user.mention}**"
         embed.set_image(url=images[i])
         #gives credit when using nekos
         if og < i:

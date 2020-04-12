@@ -146,7 +146,7 @@ class Roleplay(BaseCog):
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def hug(self, ctx, *, user: discord.Member, text: str = "" ):
+    async def hug(self, ctx, *, user: optional[discord.Member], text: str = "" ):
         """Hugs a user!"""
 
         author = ctx.message.author
@@ -172,7 +172,7 @@ class Roleplay(BaseCog):
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
-    async def tuck(self, ctx, *, user: discord.Member):
+    async def tuck(self, ctx, *, text: str = ""):
         """Tuck in a user!"""
 
         author = ctx.message.author
@@ -184,7 +184,7 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} tucks in {user.mention}**"
+        embed.description = f"**{author.mention} tucks in {text}**"
 
         embed.set_image(url=images[i])
         #gives credit when using nekos

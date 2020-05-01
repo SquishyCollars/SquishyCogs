@@ -219,6 +219,24 @@ class Roleplay(BaseCog):
             "https://media1.tenor.com/images/07302a16845ccb82af069aa86e7567f2/tenor.gif?itemid=16211298",
             "https://media1.tenor.com/images/221c0c243710a9fb197c8fa42918290b/tenor.gif?itemid=12447230",
             ],
+            "bonk": [
+            "https://cdn.discordapp.com/attachments/698842613226143754/698969166882930738/3vyvfr.gif",
+            "https://cdn.discordapp.com/attachments/698842613226143754/698855735613849630/PzVCgJ.gif",
+            "https://media1.tenor.com/images/bc8d9395166b82df05d590459f184f2d/tenor.gif?itemid=16061390",
+            "https://cdn.discordapp.com/attachments/698842613226143754/698849968005447800/tenor_12.gif",
+            "https://cdn.discordapp.com/attachments/698842613226143754/698849576991457280/tenor_13.gif",
+            "https://cdn.discordapp.com/attachments/698842613226143754/698849065953263666/atoz.gif",
+            "https://cdn.discordapp.com/attachments/698842613226143754/698848791679467540/tenor_10.gif",
+            "https://cdn.discordapp.com/attachments/698842613226143754/698848725644345464/tenor_9.gif",
+            "https://cdn.discordapp.com/attachments/698842613226143754/698848622715994162/original.gif",
+            "https://cdn.discordapp.com/attachments/698842613226143754/698848418168176650/tenor_15.gif",
+            "https://cdn.discordapp.com/attachments/698842613226143754/698848591942385714/tenor_11.gif",
+            "https://cdn.discordapp.com/attachments/698842613226143754/698848132288610351/8b17798341ae6119f33495da1c8400c6af542515cef4ffce81afb82fe72ddc5c.gif",
+            "https://cdn.discordapp.com/attachments/698842613226143754/698847860988575834/giphy_3.gif",
+            "https://cdn.discordapp.com/attachments/698842613226143754/698847645992484884/tenor_14.gif",
+            "https://cdn.discordapp.com/attachments/682226699114512429/698838106652278794/20200412_031239.jpg",
+            "https://cdn.discordapp.com/emojis/615242366491820071.gif",
+            ],
         }
         self.config.register_global(**default_global)
 
@@ -564,7 +582,24 @@ class Roleplay(BaseCog):
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
+    @commands.command()
+    @commands.bot_has_permissions(embed_links=True)
+    async def bonk(self, ctx, *,text: str = "" ):
+        """bonk someone"""
 
+        author = ctx.message.author
+        images = await self.config.bonk()
+        mn = len(images)
+        i = randint(0, mn - 1)
+
+        # Build Embed
+        embed = discord.Embed()
+        if text  == "":
+            embed.description = f"**{author.mention} bonks themselves!**"
+        else:
+            embed.description = f"**{author.mention} bonks {text}**"
+        embed.set_image(url=images[i])
+        await ctx.send(embed=embed)
 
     async def fetch_nekos_life(self, ctx, rp_action):
 

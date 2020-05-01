@@ -557,10 +557,14 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**Uh oh, {author.mention} thinks {text} is a stinky!**"
-
+        if text  == "":
+            embed.description = f"**Uh oh, {author.mention} is stinky!**"
+        else
+            embed.description = f"**Uh oh, {author.mention} thinks {text} is a stinky!**"
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
+
+
 
     async def fetch_nekos_life(self, ctx, rp_action):
 

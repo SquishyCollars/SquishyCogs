@@ -28,6 +28,8 @@ contains the following actions
 **tuck** Tuck in someone!  
 **yeet** Yeets someone!  
 **stinky** Be a stinky or call someone out for being one
+**bonk** Bonk someone
+
 
 # Credits
 https://github.com/Jintaku/Jintaku-Cogs-V3 For the base of the roleplay cog.

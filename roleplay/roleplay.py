@@ -559,7 +559,7 @@ class Roleplay(BaseCog):
         embed = discord.Embed()
         if text  == "":
             embed.description = f"**Uh oh, {author.mention} is stinky!**"
-        else
+        else:
             embed.description = f"**Uh oh, {author.mention} thinks {text} is a stinky!**"
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)

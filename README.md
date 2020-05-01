@@ -27,6 +27,7 @@ contains the following actions
 **tickle** Tickles someone!  
 **tuck** Tuck in someone!  
 **yeet** Yeets someone!  
+**stinky** Be a stinky or call someone out for being one
 
 # Credits
 https://github.com/Jintaku/Jintaku-Cogs-V3 For the base of the roleplay cog.

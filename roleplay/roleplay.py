@@ -224,38 +224,44 @@ class Roleplay(BaseCog):
                 "https://media1.tenor.com/images/8acac3c0a044cfe25d95547b05be222c/tenor.gif?itemid=10597667",
             ],
             "blush": [
-            "https://media.giphy.com/media/T3Vvyi6SHJtXW/giphy.gif",
-            "https://media1.tenor.com/images/cc187b06f246e71b07613e3957d87e00/tenor.gif",
-            "https://media1.tenor.com/images/5ea40ca0d6544dbf9c0074542810e149/tenor.gif",
-            "https://media1.tenor.com/images/dc917566da214fa3c4e7ddcc58228db9/tenor.gif",
-            "https://media.tenor.com/images/e7285221088ae2e76cfff431d0467fdc/tenor.gif",
+                "https://media.giphy.com/media/T3Vvyi6SHJtXW/giphy.gif",
+                "https://media1.tenor.com/images/cc187b06f246e71b07613e3957d87e00/tenor.gif",
+                "https://media1.tenor.com/images/5ea40ca0d6544dbf9c0074542810e149/tenor.gif",
+                "https://media1.tenor.com/images/dc917566da214fa3c4e7ddcc58228db9/tenor.gif",
+                "https://media.tenor.com/images/e7285221088ae2e76cfff431d0467fdc/tenor.gif",
             ],
             "stinky": [
-            "https://media1.tenor.com/images/01c688073bd76808d1190988d2786fdf/tenor.gif?itemid=16154821",
-            "https://media1.tenor.com/images/3472cea80508bb61cf4a43b32c7dee56/tenor.gif?itemid=4550346",
-            "https://media1.tenor.com/images/a1059f2abf295e91f58cfb287cd101b5/tenor.gif?itemid=15325836",
-            "https://media1.tenor.com/images/b0c14e7907748af4f143581aedc4c305/tenor.gif?itemid=7705307",
-            "https://media1.tenor.com/images/4eea4b2803caa8858827c45e7778611e/tenor.gif?itemid=3671501",
-            "https://media1.tenor.com/images/07302a16845ccb82af069aa86e7567f2/tenor.gif?itemid=16211298",
-            "https://media1.tenor.com/images/221c0c243710a9fb197c8fa42918290b/tenor.gif?itemid=12447230",
+                "https://media1.tenor.com/images/01c688073bd76808d1190988d2786fdf/tenor.gif?itemid=16154821",
+                "https://media1.tenor.com/images/3472cea80508bb61cf4a43b32c7dee56/tenor.gif?itemid=4550346",
+                "https://media1.tenor.com/images/a1059f2abf295e91f58cfb287cd101b5/tenor.gif?itemid=15325836",
+                "https://media1.tenor.com/images/b0c14e7907748af4f143581aedc4c305/tenor.gif?itemid=7705307",
+                "https://media1.tenor.com/images/4eea4b2803caa8858827c45e7778611e/tenor.gif?itemid=3671501",
+                "https://media1.tenor.com/images/07302a16845ccb82af069aa86e7567f2/tenor.gif?itemid=16211298",
+                "https://media1.tenor.com/images/221c0c243710a9fb197c8fa42918290b/tenor.gif?itemid=12447230",
+            ],
+            "nom": [
+                "https://media1.tenor.com/images/5878c0995fcf89352ff13189ee61f303/tenor.gif?itemid=15735907",
+                "https://i.imgur.com/Ns1RBzX.gif",
+                "https://i.chzbgr.com/full/8270595584/h4C52C87D/better-than-kisses.gif",
+                "https://media1.tenor.com/images/7ed7efa06e9c8cd89905a5c9ad5f40a0/tenor.gif?itemid=5729863",
             ],
             "bonk": [
-            "https://cdn.discordapp.com/attachments/698842613226143754/698969166882930738/3vyvfr.gif",
-            "https://cdn.discordapp.com/attachments/698842613226143754/698855735613849630/PzVCgJ.gif",
-            "https://media1.tenor.com/images/bc8d9395166b82df05d590459f184f2d/tenor.gif?itemid=16061390",
-            "https://cdn.discordapp.com/attachments/698842613226143754/698849968005447800/tenor_12.gif",
-            "https://cdn.discordapp.com/attachments/698842613226143754/698849576991457280/tenor_13.gif",
-            "https://cdn.discordapp.com/attachments/698842613226143754/698849065953263666/atoz.gif",
-            "https://cdn.discordapp.com/attachments/698842613226143754/698848791679467540/tenor_10.gif",
-            "https://cdn.discordapp.com/attachments/698842613226143754/698848725644345464/tenor_9.gif",
-            "https://cdn.discordapp.com/attachments/698842613226143754/698848622715994162/original.gif",
-            "https://cdn.discordapp.com/attachments/698842613226143754/698848418168176650/tenor_15.gif",
-            "https://cdn.discordapp.com/attachments/698842613226143754/698848591942385714/tenor_11.gif",
-            "https://cdn.discordapp.com/attachments/698842613226143754/698848132288610351/8b17798341ae6119f33495da1c8400c6af542515cef4ffce81afb82fe72ddc5c.gif",
-            "https://cdn.discordapp.com/attachments/698842613226143754/698847860988575834/giphy_3.gif",
-            "https://cdn.discordapp.com/attachments/698842613226143754/698847645992484884/tenor_14.gif",
-            "https://cdn.discordapp.com/attachments/682226699114512429/698838106652278794/20200412_031239.jpg",
-            "https://cdn.discordapp.com/emojis/615242366491820071.gif",
+                "https://cdn.discordapp.com/attachments/698842613226143754/698969166882930738/3vyvfr.gif",
+                "https://cdn.discordapp.com/attachments/698842613226143754/698855735613849630/PzVCgJ.gif",
+                "https://media1.tenor.com/images/bc8d9395166b82df05d590459f184f2d/tenor.gif?itemid=16061390",
+                "https://cdn.discordapp.com/attachments/698842613226143754/698849968005447800/tenor_12.gif",
+                "https://cdn.discordapp.com/attachments/698842613226143754/698849576991457280/tenor_13.gif",
+                "https://cdn.discordapp.com/attachments/698842613226143754/698849065953263666/atoz.gif",
+                "https://cdn.discordapp.com/attachments/698842613226143754/698848791679467540/tenor_10.gif",
+                "https://cdn.discordapp.com/attachments/698842613226143754/698848725644345464/tenor_9.gif",
+                "https://cdn.discordapp.com/attachments/698842613226143754/698848622715994162/original.gif",
+                "https://cdn.discordapp.com/attachments/698842613226143754/698848418168176650/tenor_15.gif",
+                "https://cdn.discordapp.com/attachments/698842613226143754/698848591942385714/tenor_11.gif",
+                "https://cdn.discordapp.com/attachments/698842613226143754/698848132288610351/8b17798341ae6119f33495da1c8400c6af542515cef4ffce81afb82fe72ddc5c.gif",
+                "https://cdn.discordapp.com/attachments/698842613226143754/698847860988575834/giphy_3.gif",
+                "https://cdn.discordapp.com/attachments/698842613226143754/698847645992484884/tenor_14.gif",
+                "https://cdn.discordapp.com/attachments/682226699114512429/698838106652278794/20200412_031239.jpg",
+                "https://cdn.discordapp.com/emojis/615242366491820071.gif",
             ],
         }
         self.config.register_global(**default_global)
@@ -561,6 +567,23 @@ class Roleplay(BaseCog):
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} dropkicks {text}**"
+
+        embed.set_image(url=images[i])
+        await ctx.send(embed=embed)
+        
+    @commands.command()
+    @commands.bot_has_permissions(embed_links=True)
+    async def nom(self, ctx, *,text: str = "" ):
+        """Nom a user!"""
+
+        author = ctx.message.author
+        images = await self.config.nom()
+        mn = len(images)
+        i = randint(0, mn - 1)
+
+        # Build Embed
+        embed = discord.Embed()
+        embed.description = f"**{author.mention} noms on {text}**"
 
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)

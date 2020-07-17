@@ -577,7 +577,7 @@ class Roleplay(BaseCog):
         """Nom a user!"""
 
         author = ctx.message.author
-        images = await self.config.dropkick()
+        images = await self.config.nom()
         mn = len(images)
         i = randint(0, mn - 1)
 

@@ -250,7 +250,7 @@ class Roleplay(BaseCog):
                 "https://media.tenor.com/images/435a23e4b93744acb8bc28feb8b66cc0/tenor.gif",             
                 "https://cdn.discordapp.com/attachments/733980686796455946/734022242110931015/tenor.gif",
                 "https://cdn.discordapp.com/attachments/733980686796455946/734022246309298276/giphy.gif",
-                "https://cdn.discordapp.com/attachments/733980686796455946/734022246439583744/9453ade6ec785ff862167527757eac05.gif,
+                "https://cdn.discordapp.com/attachments/733980686796455946/734022246439583744/9453ade6ec785ff862167527757eac05.gif",
             ],
             "bonk": [
                 "https://cdn.discordapp.com/attachments/698842613226143754/698969166882930738/3vyvfr.gif",

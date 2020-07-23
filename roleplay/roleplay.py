@@ -244,6 +244,13 @@ class Roleplay(BaseCog):
                 "https://i.imgur.com/Ns1RBzX.gif",
                 "https://i.chzbgr.com/full/8270595584/h4C52C87D/better-than-kisses.gif",
                 "https://media1.tenor.com/images/7ed7efa06e9c8cd89905a5c9ad5f40a0/tenor.gif?itemid=5729863",
+                "https://media.tenor.com/images/e9ce80a3ae9ccf955904ba7672b93b3f/tenor.gif",
+                "https://media.tenor.com/images/c041d53a96143ec2dee20b5f77de7cfd/tenor.gif",
+                "https://media.tenor.com/images/c5f3440727e587713f6c706e887701b4/tenor.gif",
+                "https://media.tenor.com/images/435a23e4b93744acb8bc28feb8b66cc0/tenor.gif",             
+                "https://cdn.discordapp.com/attachments/733980686796455946/734022242110931015/tenor.gif",
+                "https://cdn.discordapp.com/attachments/733980686796455946/734022246309298276/giphy.gif",
+                "https://cdn.discordapp.com/attachments/733980686796455946/734022246439583744/9453ade6ec785ff862167527757eac05.gif",
             ],
             "bonk": [
                 "https://cdn.discordapp.com/attachments/698842613226143754/698969166882930738/3vyvfr.gif",

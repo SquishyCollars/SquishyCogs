@@ -27,9 +27,9 @@ contains the following actions
 **tickle** Tickles someone!  
 **tuck** Tuck in someone!  
 **yeet** Yeets someone!  
-**stinky** Be a stinky or call someone out for being one.
-**bonk** Bonk someone!
-**nom** Nom someone!
+**stinky** Be a stinky or call someone out for being one.  
+**bonk** Bonk someone!  
+**nom** Nom someone!  
 
 
 # Credits

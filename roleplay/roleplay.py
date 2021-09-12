@@ -55,7 +55,6 @@ class Roleplay(BaseCog):
                 "https://cdn.discordapp.com/attachments/698106135554555914/698854972045131866/0d18a2a7c78f4dad44fe1498573c206916d808a0r1-444-250_hq.gif",
                 "https://cdn.discordapp.com/attachments/698106135554555914/698854879925502002/FoolishRequiredCaracal-small.gif",
                 "https://cdn.discordapp.com/attachments/698106135554555914/698854832831725638/95384d955807cd6735e63b27b11dd202ae9c202cr1-540-500_00.gif",
-                "https://media1.tenor.com/images/1d637775ba77f8b23e73535d31fc540b/tenor.gif?itemid=5062546",
                 "https://cdn.discordapp.com/attachments/698106135554555914/698854042096500746/5LYzTBVoS196gvYvw3zjwF_DOOLsMLGVYRxlYm-_HYM.gif",
                 "https://cdn.discordapp.com/attachments/698106135554555914/698853559365664818/tumblr_inline_n998n40b2q1sx8vac540.gif",
                 "https://cdn.discordapp.com/attachments/698106135554555914/698853439152717864/d26c65f2d66be540-merriberri-graphic-arts-services-requests.gif",

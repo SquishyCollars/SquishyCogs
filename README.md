@@ -12,24 +12,28 @@ Just a smol collection of cogs for my personal use, but feel free to have a look
 **roleplay**  
 Roleplay actions with other people with gifs!
 contains the following actions
-**blush** You're blushing  
-**cry** Cry D:  
-**dropkick** Dropkick someone!  
-**feed** Feeds someone!  
-**highfive** Highfives someone!  
-**hug** Hugs someone!  
-**kiss** Kiss someone!  
-**nyan** Go nyaaaa~!  
-**pat** Pats someone!   
-**poke** Pokes someone!   
-**slap** Slaps someone!  
-**smug** Be smug!  
-**tickle** Tickles someone!  
-**tuck** Tuck in someone!  
-**yeet** Yeets someone!  
-**stinky** Be a stinky or call someone out for being one
-**bonk** Bonk someone
+  **blush** You're blushing  
+  **cry** Cry D:  
+  **dropkick** Dropkick someone!  
+  **feed** Feeds someone!  
+  **highfive** Highfives someone!  
+  **hug** Hugs someone!  
+  **kiss** Kiss someone!  
+  **nyan** Go nyaaaa~!  
+  **pat** Pats someone!   
+  **poke** Pokes someone!   
+  **slap** Slaps someone!  
+  **smug** Be smug!  
+  **tickle** Tickles someone!  
+  **tuck** Tuck in someone!  
+  **yeet** Yeets someone!  
+  **stinky** Be a stinky or call someone out for being one.  
+  **bonk** Bonk someone!  
+  **nom** Nom someone!  
+
+**birthday**
 
 
 # Credits
-https://github.com/Jintaku/Jintaku-Cogs-V3 For the base of the roleplay cog.
+Roleplay cog forked from https://github.com/Jintaku/Jintaku-Cogs-V3.
+Birthday cog forked from https://github.com/Injabie3/lui-cogs-v3

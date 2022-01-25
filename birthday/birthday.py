@@ -286,25 +286,7 @@ class Birthday(commands.Cog):
             return msg.author == ctx.author and msg.channel == ctx.channel
 
         async with self.config.member(member).all() as userConfig:
-            addedBefore = userConfig[KEY_ADDED_BEFORE]
             birthdayExists = userConfig[KEY_BDAY_MONTH] and userConfig[KEY_BDAY_DAY]
-            if not birthdayExists and addedBefore:
-                await ctx.send(
-                    warning(
-                        f"This user had their birthday previously removed. Are you sure you "
-                        "still want to re-add them? Please type `yes` to confirm."
-                    )
-                )
-                try:
-                    response = await self.bot.wait_for("message", timeout=30.0, check=check)
-                except asyncio.TimeoutError:
-                    await ctx.send(f"You took too long, not re-adding them.")
-                    return
-
-                if response.content.lower() != "yes":
-                    await ctx.send(f"Not re-adding them to the birthday list.")
-                    return
-
             userConfig[KEY_BDAY_MONTH] = month
             userConfig[KEY_BDAY_DAY] = day
 
@@ -462,7 +444,7 @@ class Birthday(commands.Cog):
     @commands.guild_only()
     @checks.mod_or_permissions(administrator=True)
     async def deleteMemberBirthdayadm(self, ctx: Context, member: discord.Member):
-        """Delete a user's birthday role and birthday from the list.
+        """Delete any user's birthday role and birthday from the list.
 
         Parameters:
         -----------
@@ -527,12 +509,7 @@ class Birthday(commands.Cog):
     @_birthday.command(name="delete", aliases=["del", "remove", "rm"])
     @commands.guild_only()
     async def deleteMemberBirthday(self, ctx: Context):
-        """Delete a user's birthday role and birthday from the list.
-
-        Parameters:
-        -----------
-        member: discord.Member
-            The guild member whose birthday role and saved birthday you want to remove.
+        """Delete your birthday role and birthday from the list.
         """
         rid = await self.config.guild(ctx.guild).get_attr(KEY_BDAY_ROLE)()
         member = ctx.message.author

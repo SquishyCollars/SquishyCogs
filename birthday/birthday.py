@@ -306,7 +306,7 @@ class Birthday(commands.Cog):
 
         await confMsg.edit(
             content=":white_check_mark: **Birthday - Add**: Successfully {0} **{1}**'s "
-            "birthday, and the role will be automatically assigned on the day.".format(
+            "birthday, and the role will be automatically assigned on the day. Remember its in DAY MONTH ;)".format(
                 "updated" if birthdayExists else "added", member.name
             )
         )

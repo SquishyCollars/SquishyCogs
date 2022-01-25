@@ -242,10 +242,10 @@ class Birthday(commands.Cog):
 
         Parameters:
         -----------
-        day: int (optional)
+        day: int
             The birthday day, range between 1 and 31 inclusive, depending on month.
 
-        month: int (optional)
+        month: int
             The birthday month, between 1 and 12 inclusive.
         """
         rid = await self.config.guild(ctx.guild).get_attr(KEY_BDAY_ROLE)()
@@ -261,7 +261,12 @@ class Birthday(commands.Cog):
 
         # Check if both the inputs are empty, for this case set the birthday as current day
         # If one of the parameters are missing, then send error message
-        if month == None or day == None:
+        if month == None and day == None:
+            await ctx.send(
+                "Please enter birthday as **day month**"
+            )
+
+        elif month == None or day == None:
             await ctx.send(
                 ":negative_squared_cross_mark: **Birthday - Add**: "
                 "Please enter a valid birthday!"

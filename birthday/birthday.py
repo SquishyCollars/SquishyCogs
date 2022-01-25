@@ -294,7 +294,7 @@ class Birthday(commands.Cog):
 
         confMsg = await ctx.send(
             ":white_check_mark: **Birthday - Add**: Successfully {0} **{1}**'s birthday "
-            "as **{2:%B} {2:%d}**. The role will be assigned automatically on this "
+            "as **{2:%d} {2:%B}**. The role will be assigned automatically on this "
             "day.".format("updated" if birthdayExists else "added", member.name, userBirthday)
         )
 

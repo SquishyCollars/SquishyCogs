@@ -34,7 +34,6 @@ contains the following actions
 **birthday**
 Sends out birthday greetings and elevates user to a birthday role when its their birthday!
 
-
 # Credits
 Roleplay cog forked from https://github.com/Jintaku/Jintaku-Cogs-V3.
 Birthday cog forked from https://github.com/Injabie3/lui-cogs-v3

@@ -31,12 +31,14 @@ contains the following actions
   **bonk** Bonk someone!  
   **nom** Nom someone!  
 
-### birthday  
+
+### birthday 
+
 Sends out birthday greetings and elevates user to a birthday role when its their birthday!  
   **birthday add** Add your birthday  
   **birthday delete** Delete your birthdays  
 
 
-# Credits  
+# Credits 
 Roleplay cog forked from https://github.com/Jintaku/Jintaku-Cogs-V3.  
-Birthday cog forked from https://github.com/Injabie3/lui-cogs-v3
+Birthday cog forked from https://github.com/Injabie3/lui-cogs-v3   

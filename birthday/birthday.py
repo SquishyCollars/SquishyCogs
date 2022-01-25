@@ -127,7 +127,7 @@ class Birthday(commands.Cog):
     @commands.guild_only()
     @checks.mod_or_permissions(administrator=True)
     async def addMemberBirthdayAdm(
-        self, ctx: Context, member: discord.Member, month: int = None, day: int = None
+        self, ctx: Context, member: discord.Member, day: int = None, month: int = None
     ):
         """Add any user's birthday to the list. If date is not specified, it will default to the current day.
         On the day, the bot will automatically add the user to the birthday role.
@@ -137,11 +137,11 @@ class Birthday(commands.Cog):
         member: discord.Member
             The member whose birthday is being assigned.
 
-        month: int (optional)
-            The birthday month, between 1 and 12 inclusive.
-
         day: int (optional)
             The birthday day, range between 1 and 31 inclusive, depending on month.
+
+        month: int (optional)
+            The birthday month, between 1 and 12 inclusive
         """
         rid = await self.config.guild(ctx.guild).get_attr(KEY_BDAY_ROLE)()
 
@@ -235,21 +235,21 @@ class Birthday(commands.Cog):
     @_birthday.command(name="add", aliases=["set"])
     @commands.guild_only()
     async def addMemberBirthday(
-        self, ctx: Context, member: Context.author, month: int = None, day: int = None
+        self, ctx: Context, day: int = None, month: int = None
     ):
         """Add your birthday to the list. If date is not specified, it will default to the current day.
         On the day, the bot will automatically add the user to the birthday role.
 
         Parameters:
         -----------
+        day: int (optional)
+            The birthday day, range between 1 and 31 inclusive, depending on month.
 
         month: int (optional)
             The birthday month, between 1 and 12 inclusive.
-
-        day: int (optional)
-            The birthday day, range between 1 and 31 inclusive, depending on month.
         """
         rid = await self.config.guild(ctx.guild).get_attr(KEY_BDAY_ROLE)()
+        member = msg.author
 
         # Check if guild is initialized.
         if not rid:

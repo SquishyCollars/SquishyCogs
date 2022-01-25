@@ -265,6 +265,7 @@ class Birthday(commands.Cog):
             await ctx.send(
                 "Please enter birthday as **day month**"
             )
+            return
 
         elif month == None or day == None:
             await ctx.send(

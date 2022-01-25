@@ -249,7 +249,7 @@ class Birthday(commands.Cog):
             The birthday month, between 1 and 12 inclusive.
         """
         rid = await self.config.guild(ctx.guild).get_attr(KEY_BDAY_ROLE)()
-        member = msg.author
+        member = ctx.author
 
         # Check if guild is initialized.
         if not rid:

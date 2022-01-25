@@ -54,7 +54,6 @@ class Birthday(commands.Cog):
 
     @commands.group(name="birthday")
     @commands.guild_only()
-    @checks.mod_or_permissions(administrator=True)
     async def _birthday(self, ctx: Context):
         """Birthday role assignment settings."""
 

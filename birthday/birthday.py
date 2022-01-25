@@ -235,7 +235,7 @@ class Birthday(commands.Cog):
     @_birthday.command(name="add", aliases=["set"])
     @commands.guild_only()
     async def addMemberBirthday(
-        self, ctx: Context, member: discord.author, month: int = None, day: int = None
+        self, ctx: Context, member: author, month: int = None, day: int = None
     ):
         """Add your birthday to the list. If date is not specified, it will default to the current day.
         On the day, the bot will automatically add the user to the birthday role.

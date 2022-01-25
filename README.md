@@ -9,7 +9,7 @@ Just a smol collection of cogs for my personal use, but feel free to have a look
 `[p] is your prefix`
 
 ## Cog list
-#roleplay
+# roleplay
 Roleplay actions with other people with gifs!
 contains the following actions
   **blush** You're blushing  
@@ -31,7 +31,7 @@ contains the following actions
   **bonk** Bonk someone!  
   **nom** Nom someone!  
 
-#birthday
+# birthday
 Sends out birthday greetings and elevates user to a birthday role when its their birthday!
   **birthday add** Add your birthday
   **birthday delete** Delete your birthdays

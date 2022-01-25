@@ -32,6 +32,7 @@ contains the following actions
   **nom** Nom someone!  
 
 **birthday**
+Sends out birthday greetings and elevates user to a birthday role when its their birthday!
 
 
 # Credits

@@ -261,11 +261,7 @@ class Birthday(commands.Cog):
 
         # Check if both the inputs are empty, for this case set the birthday as current day
         # If one of the parameters are missing, then send error message
-        if month == None and day == None:
-            day = int(time.strftime("%d"))
-            month = int(time.strftime("%m"))
-
-        elif month == None or day == None:
+        if month == None or day == None:
             await ctx.send(
                 ":negative_squared_cross_mark: **Birthday - Add**: "
                 "Please enter a valid birthday!"

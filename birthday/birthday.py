@@ -237,107 +237,107 @@ class Birthday(commands.Cog):
     async def addMemberBirthday(
         self, ctx: Context, member: ctx.message.author, month: int = None, day: int = None
     ):
-    """Add your birthday to the list. If date is not specified, it will default to the current day.
-    On the day, the bot will automatically add the user to the birthday role.
+        """Add your birthday to the list. If date is not specified, it will default to the current day.
+        On the day, the bot will automatically add the user to the birthday role.
 
-    Parameters:
-    -----------
+        Parameters:
+        -----------
 
-    month: int (optional)
-        The birthday month, between 1 and 12 inclusive.
+        month: int (optional)
+            The birthday month, between 1 and 12 inclusive.
 
-    day: int (optional)
-        The birthday day, range between 1 and 31 inclusive, depending on month.
-    """
-    rid = await self.config.guild(ctx.guild).get_attr(KEY_BDAY_ROLE)()
+        day: int (optional)
+            The birthday day, range between 1 and 31 inclusive, depending on month.
+        """
+        rid = await self.config.guild(ctx.guild).get_attr(KEY_BDAY_ROLE)()
 
-    # Check if guild is initialized.
-    if not rid:
-        await ctx.send(
-            ":negative_squared_cross_mark: **Birthday - Add**: "
-            "This server is not configured, please set a role!"
-        )
-        return
-
-    # Check if both the inputs are empty, for this case set the birthday as current day
-    # If one of the parameters are missing, then send error message
-    if month == None and day == None:
-        day = int(time.strftime("%d"))
-        month = int(time.strftime("%m"))
-
-    elif month == None or day == None:
-        await ctx.send(
-            ":negative_squared_cross_mark: **Birthday - Add**: "
-            "Please enter a valid birthday!"
-        )
-        return
-
-    # Check inputs here.
-    try:
-        userBirthday = datetime(2020, month, day)
-    except ValueError:
-        await ctx.send(
-            ":negative_squared_cross_mark: **Birthday - Add**: "
-            "Please enter a valid birthday!"
-        )
-        return
-
-    def check(msg: discord.Message):
-        return msg.author == ctx.author and msg.channel == ctx.channel
-
-    async with self.config.member(member).all() as userConfig:
-        addedBefore = userConfig[KEY_ADDED_BEFORE]
-        birthdayExists = userConfig[KEY_BDAY_MONTH] and userConfig[KEY_BDAY_DAY]
-        if not birthdayExists and addedBefore:
+        # Check if guild is initialized.
+        if not rid:
             await ctx.send(
-                warning(
-                    f"This user had their birthday previously removed. Are you sure you "
-                    "still want to re-add them? Please type `yes` to confirm."
-                )
+                ":negative_squared_cross_mark: **Birthday - Add**: "
+                "This server is not configured, please set a role!"
             )
-            try:
-                response = await self.bot.wait_for("message", timeout=30.0, check=check)
-            except asyncio.TimeoutError:
-                await ctx.send(f"You took too long, not re-adding them.")
-                return
+            return
 
-            if response.content.lower() != "yes":
-                await ctx.send(f"Not re-adding them to the birthday list.")
-                return
+        # Check if both the inputs are empty, for this case set the birthday as current day
+        # If one of the parameters are missing, then send error message
+        if month == None and day == None:
+            day = int(time.strftime("%d"))
+            month = int(time.strftime("%m"))
 
-        userConfig[KEY_BDAY_MONTH] = month
-        userConfig[KEY_BDAY_DAY] = day
+        elif month == None or day == None:
+            await ctx.send(
+                ":negative_squared_cross_mark: **Birthday - Add**: "
+                "Please enter a valid birthday!"
+            )
+            return
 
-    confMsg = await ctx.send(
-        ":white_check_mark: **Birthday - Add**: Successfully {0} **{1}**'s birthday "
-        "as **{2:%B} {2:%d}**. The role will be assigned automatically on this "
-        "day.".format("updated" if birthdayExists else "added", member.name, userBirthday)
-    )
+        # Check inputs here.
+        try:
+            userBirthday = datetime(2020, month, day)
+        except ValueError:
+            await ctx.send(
+                ":negative_squared_cross_mark: **Birthday - Add**: "
+                "Please enter a valid birthday!"
+            )
+            return
 
-    # Explicitly check to see if user should be added to role, if the month
-    # and day just so happen to be the same as it is now.
-    await self.checkBirthday()
+        def check(msg: discord.Message):
+            return msg.author == ctx.author and msg.channel == ctx.channel
 
-    await asyncio.sleep(5)  # pylint: disable=no-member
+        async with self.config.member(member).all() as userConfig:
+            addedBefore = userConfig[KEY_ADDED_BEFORE]
+            birthdayExists = userConfig[KEY_BDAY_MONTH] and userConfig[KEY_BDAY_DAY]
+            if not birthdayExists and addedBefore:
+                await ctx.send(
+                    warning(
+                        f"This user had their birthday previously removed. Are you sure you "
+                        "still want to re-add them? Please type `yes` to confirm."
+                    )
+                )
+                try:
+                    response = await self.bot.wait_for("message", timeout=30.0, check=check)
+                except asyncio.TimeoutError:
+                    await ctx.send(f"You took too long, not re-adding them.")
+                    return
 
-    await confMsg.edit(
-        content=":white_check_mark: **Birthday - Add**: Successfully {0} **{1}**'s "
-        "birthday, and the role will be automatically assigned on the day.".format(
-            "updated" if birthdayExists else "added", member.name
+                if response.content.lower() != "yes":
+                    await ctx.send(f"Not re-adding them to the birthday list.")
+                    return
+
+            userConfig[KEY_BDAY_MONTH] = month
+            userConfig[KEY_BDAY_DAY] = day
+
+        confMsg = await ctx.send(
+            ":white_check_mark: **Birthday - Add**: Successfully {0} **{1}**'s birthday "
+            "as **{2:%B} {2:%d}**. The role will be assigned automatically on this "
+            "day.".format("updated" if birthdayExists else "added", member.name, userBirthday)
         )
-    )
 
-    self.logger.info(
-        "%s#%s (%s) added the birthday of %s#%s (%s) as %s",
-        ctx.author.name,
-        ctx.author.discriminator,
-        ctx.author.id,
-        member.name,
-        member.discriminator,
-        member.id,
-        userBirthday.strftime("%B %d"),
-    )
-    return
+        # Explicitly check to see if user should be added to role, if the month
+        # and day just so happen to be the same as it is now.
+        await self.checkBirthday()
+
+        await asyncio.sleep(5)  # pylint: disable=no-member
+
+        await confMsg.edit(
+            content=":white_check_mark: **Birthday - Add**: Successfully {0} **{1}**'s "
+            "birthday, and the role will be automatically assigned on the day.".format(
+                "updated" if birthdayExists else "added", member.name
+            )
+        )
+
+        self.logger.info(
+            "%s#%s (%s) added the birthday of %s#%s (%s) as %s",
+            ctx.author.name,
+            ctx.author.discriminator,
+            ctx.author.id,
+            member.name,
+            member.discriminator,
+            member.id,
+            userBirthday.strftime("%B %d"),
+        )
+        return
 
     @_birthday.command(name="list", aliases=["ls"])
     @commands.guild_only()

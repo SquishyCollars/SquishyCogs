@@ -1,5 +1,5 @@
 from .roleplay import Roleplay
 
-def setup(bot):
+async def setup(bot):
     n = Roleplay()
     await bot.add_cog(n)
